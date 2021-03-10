@@ -7,3 +7,9 @@ const password2El = document.querySelector('#password2');
 const form = document.querySelector('#form');
 const messageContainer = document.querySelector('.message-container');
 const message = document.querySelector('#message');
+
+const processFormData = (e)=>{
+  console.log(e);
+}
+
+form.addEventListener('submit', processFormData);
