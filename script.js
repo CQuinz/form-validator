@@ -35,9 +35,11 @@ const validateForm = ()=>{
     password2El.style.borderColor='red';
     return
   }
-
+  // If form is valid and passwords match
   if(isValid && passwordsMatch){
-    console.log('Passwords match!');
+    message.textContent = 'Sucessfully Registered!';
+    message.style.color= 'green';
+    messageContainer.style.borderColor= 'green';
   }
   
 }
