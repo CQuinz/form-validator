@@ -19,6 +19,7 @@ const validateForm = ()=>{
     message.textContent = 'Please fill out all fields';
     message.style.color='red';
     messageContainer.gstyle.borderColor='red';
+    return
   }
   // Check if passwords match
   if(password1El.value === password2El.value){
@@ -29,10 +30,14 @@ const validateForm = ()=>{
     passwordsMatch = false;
     message.textContent='Make sure passwords match!';
     message.style.color='red';
-    messageContainer.gstyle.borderColor='red';
+    messageContainer.style.borderColor='red';
     password1El.style.borderColor='red';
-    password2El.style.borderColor='red'
+    password2El.style.borderColor='red';
+    return
+  }
 
+  if(isValid && passwordsMatch){
+    console.log('Passwords match!');
   }
   
 }
