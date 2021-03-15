@@ -50,7 +50,8 @@ const storeInputData = ()=>{
     phone: form.phone.value,
     email: form.email.value,
     website: form.website.value
-  }
+  };
+  // Do something with user input data
   console.log(userInputs);
 }
 
@@ -58,7 +59,10 @@ const processFormData = (e)=>{
   e.preventDefault();
   // Validate form
   validateForm();
-  storeInputData();
+  if(isValid && passwordsMatch){
+    storeInputData();
+  }
+  
 }
 
 form.addEventListener('submit', processFormData);
