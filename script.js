@@ -41,13 +41,24 @@ const validateForm = ()=>{
     message.style.color= 'green';
     messageContainer.style.borderColor= 'green';
   }
-  
+}
+
+const storeInputData = ()=>{
+  const userInputs ={
+    name: form.name.value,
+    password: form.password.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    website: form.website.value
+  }
+  console.log(userInputs);
 }
 
 const processFormData = (e)=>{
   e.preventDefault();
   // Validate form
   validateForm();
+  storeInputData();
 }
 
 form.addEventListener('submit', processFormData);
